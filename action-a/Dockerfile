@@ -1,13 +1,14 @@
-FROM debian:9.5-slim
+FROM archlinux:rolling
 
-LABEL "com.github.actions.name"="Hello World"
-LABEL "com.github.actions.description"="Write arguments to the standard output"
-LABEL "com.github.actions.icon"="mic"
-LABEL "com.github.actions.color"="purple"
+LABEL "com.github.actions.name"="Bienvenu en ligne."
+LABEL "com.github.actions.description"="Démarrage de 'ArchLinux:Rolling' dans un conteneur Docker."
+LABEL "com.github.actions.stdout="echo The standard output."
+LABEL "com.github.actions.icon"="oci"
+LABEL "com.github.actions.color"="blue"
 
-LABEL "repository"="http://github.com/octocat/hello-world"
-LABEL "homepage"="http://github.com/actions"
-LABEL "maintainer"="Octocat <octocat@github.com>"
+LABEL "repository"="http://github.com/acidburn0zzz/hello-github-actions"
+LABEL "homepage"="http://github.com/acidburn0zzz"
+LABEL "maintainer"="Acidburn0zzz <acidbinside@vivaldi.net>"
 
-ADD entrypoint.sh /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
+ADD bash /usr/bin/bash
+ENTRYPOINT ["/usr/bin/bash"]
