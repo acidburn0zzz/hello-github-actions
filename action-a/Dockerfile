@@ -10,5 +10,5 @@ LABEL "repository"="http://github.com/acidburn0zzz/hello-github-actions"
 LABEL "homepage"="http://github.com/acidburn0zzz"
 LABEL "maintainer"="Acidburn0zzz <acidbinside@vivaldi.net>"
 
-ADD bash /usr/bin/bash
-ENTRYPOINT ["/usr/bin/bash"]
+ADD entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
